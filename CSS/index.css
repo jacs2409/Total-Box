@@ -1,0 +1,42 @@
+@import url('./variables.css');
+
+@media (max-width: 767px){
+
+	main {
+		min-height: 100vh;
+		padding: 0 4%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		flex-direction: column; 
+		justify-content: center;
+	}
+
+	h1{
+		font-size: var(--font-h1);
+		color: var(--text-w);
+		text-align: center;
+	}
+
+	h1 span{
+		color: var(--text-r);
+	}
+
+	main img {
+	    width: 100%;
+	    height: auto;
+	    position: fixed;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    opacity: 0.25;
+	    z-index: -1;
+	    pointer-events: none;
+	}
+
+	footer {
+		color: var(--text-w);
+	}
+
+	
+}
