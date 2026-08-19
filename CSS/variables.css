@@ -2,13 +2,15 @@
 	/*color de fondo*/
 	--bg-color: #0A0324;
 	--bg-nav: #000000;	
+	--bg-rut: #150E39;
 	/*color de textos*/
 	--text-w: #E9EBFC;
 	--text-r: #C01111;
+	--text-c: #D9D8DE;
 	/*Tamaños de fuentes y tipografia*/
 	--tipografia: 'Poppins', sans-serif;
 	--font-h1: clamp(50px, 10vw, 70vh);
-	--font-h2: clamp(40px, 8vw, 50vh);
+	--font-h2: clamp(30px, 6vw, 40vh);
 	--font-h3: clamp(24px, 3vw, 5vh);
 	--font-p: clamp(16px, 3vw, 2vh);
 	--font-span: clamp(18px, 3vw, 2.5vh);
