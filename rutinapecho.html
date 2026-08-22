@@ -184,5 +184,27 @@
 	<footer>
 		<p>&copy; 2026 Total Box Gym. Todos los derechos reservados.</p>
 	</footer>
+
+	<script>
+		const ejercicios = document.querySelectorAll('.cont_rut input');
+
+		ejercicios.forEach(input => {
+
+			input.addEventListener('change', function() {
+
+				const video = this
+					.closest('.cont_rut')
+					.querySelector('video');
+
+				if (!this.checked) {
+					video.pause();
+					video.currentTime = 0;
+				}
+
+			});
+
+		});
+	</script>
+
 </body>
 </html>
