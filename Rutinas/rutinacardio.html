@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Total-Box Rutina Pecho</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/rutinas.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/navbar.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+	<header>
+		<label for="ico_menu" id="btnnav">☰</label>
+		<input type="checkbox" id="ico_menu">
+		<nav>
+			<label for="ico_menu" id="cerrarnav">✕</label>
+			<ul>
+				<li class="menui">
+					<a href="../index.html">Inicio</a>
+					<i class="fa-solid fa-house"></i>
+				</li>
+				<li class="menu1">
+					<input type="checkbox" id="rutinas">
+					<label for="rutinas" class="tituloM1">Rutinas de GYM<i class="fa-solid fa-chevron-down"></i></label>
+					<ul class="menu2">
+						<li><a href="./rutinapecho.html">Ejercicios De Pecho</a></li>
+						<li><a href="./rutinaespalda.html">Ejercicios De Espalda</a></li>
+						<li><a href="./rutinabrazo.html">Ejercicios De Brazo</a></li>
+						<li><a href="./rutinahombro.html">Ejercicios De Hombro</a></li>
+						<li><a href="./rutinaabdomen.html">Ejercicios De Abdomen</a></li>
+						<li><a href="./rutinapierna.html">Ejercicios De Pierna</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+		</nav>
+	</header>
+
+	<main>
+		<h1>Ejercicios De Cardio</h1>
+		<p>Se recomienda realizar 10–15 minutos de cardio antes de iniciar o al finalizar para complementar el entrenamiento.</p>
+	</main>
+
+	<section>
+	    <article class="cont_rut">
+	        <label for="ejercicio1" class="titulo">
+	            <h2>Entrenamiento en Máquina Elíptica</h2>
+	            <i class="fa-solid fa-chevron-down"></i>
+	        </label>
+	        <input type="checkbox" id="ejercicio1">
+	        <div class="cont_interno">
+	            <p>Descripción: Realiza un movimiento continuo utilizando brazos y piernas. Mantén una postura erguida y aumenta gradualmente la resistencia según tu nivel.</p>
+	            <p>Duración: 20-30 minutos</p>
+	            <p>Trabaja: Sistema cardiovascular, piernas, glúteos y brazos.</p>
+	            <video controls>
+	                <source src="../assets/rutinas_cardio/cardio1.mp4" type="video/mp4">
+	            </video>
+	        </div>
+	    </article>
+	    <article class="cont_rut">
+	        <label for="ejercicio2" class="titulo">
+	            <h2>Remo en Máquina</h2>
+	            <i class="fa-solid fa-chevron-down"></i>
+	        </label>
+	        <input type="checkbox" id="ejercicio2">
+	        <div class="cont_interno">
+	            <p>Descripción: Realiza ciclos de tracción y recuperación manteniendo la espalda estable. Empuja con las piernas y acompaña el movimiento con los brazos de forma controlada.</p>
+	            <p>Duración: 15-20 minutos</p>
+	            <p>Trabaja: Sistema cardiovascular, piernas, espalda, brazos y musculatura del core.</p>
+	            <video controls>
+	                <source src="../assets/rutinas_cardio/cardio2.mp4" type="video/mp4">
+	            </video>
+	        </div>
+	    </article>
+	    <article class="cont_rut">
+	        <label for="ejercicio3" class="titulo">
+	            <h2>Ciclismo en Bicicleta Estática</h2>
+	            <i class="fa-solid fa-chevron-down"></i>
+	        </label>
+	        <input type="checkbox" id="ejercicio3">
+	        <div class="cont_interno">
+	            <p>Descripción: Pedalea manteniendo un ritmo constante y ajusta la resistencia de acuerdo con tu nivel. Mantén una postura cómoda y controla la velocidad durante toda la sesión.</p>
+	            <p>Duración: 20-30 minutos</p>
+	            <p>Trabaja: Sistema cardiovascular, cuádriceps, isquiotibiales y glúteos.</p>
+	            <video controls>
+	                <source src="../assets/rutinas_cardio/cardio3.mp4" type="video/mp4">
+	            </video>
+	        </div>
+	    </article>
+	</section>
+
+	<footer>
+		<p>&copy; 2026 Total Box Gym. Todos los derechos reservados.</p>
+	</footer>
+
+	<script>
+		const ejercicios = document.querySelectorAll('.cont_rut input');
+
+		ejercicios.forEach(input => {
+
+			input.addEventListener('change', function() {
+
+				const video = this
+					.closest('.cont_rut')
+					.querySelector('video');
+
+				if (!this.checked) {
+					video.pause();
+					video.currentTime = 0;
+				}
+
+			});
+
+		});
+	</script>
+
+</body>
+</html>

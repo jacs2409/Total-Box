@@ -9,12 +9,9 @@
 	--text-w: #f9fafb;        
 	--text-ic: #38bdf8; 
 	--text-Ttar: #ceeffd;        
-	--text-Ptar: #e7f7fe;     
-	--text-c: #9ca3af;        
-	--text-gris: #6b7280;    
+	--text-Ptar: #e7f7fe;             
 	/*Bordes*/
-	--border-color: #38bdf8;  
-	--border-sel: #60a5fa;  
+	--border-color: #38bdf8;   
 
 	--tipografia: 'Poppins', sans-serif;
 	--font-h1: clamp(30px, 8vw, 50vh);
