@@ -3,74 +3,87 @@
 @media (max-width: 767px) {
 
 	#ico_menu {
-	    display: none;
+		display: none;
 	}
 
 	#btnnav {
-	    position: fixed;
-	    top: 3%;
-	    left: 4%;
-	    width: 50px;
-	    height: 50px;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-	    color: var(--text-w);
-	    font-size: 30px;
-	    z-index: 1001;
+		position: fixed;
+		top: 3%;
+		left: 4%;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--text-w);
+		font-size: 30px;
+		z-index: 1001;
+		cursor: pointer;
 	}
 
 	nav {
-	    position: fixed;
-	    width: 100vw;
-	    height: 100vh;
-	    background: var(--bg-nav);
-	    z-index: 1000;
-	    transform: translateX(-100%);
-	    transition: transform 0.35s ease;
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;
-	    justify-content: center;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: var(--bg-nav);
+		z-index: 1000;
+		transform: translateX(-100%);
+		transition: transform 0.35s ease;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	#ico_menu:checked ~ nav {
-	    transform: translateX(0);
+		transform: translateX(0);
 	}
 
 	#cerrarnav {
-	    position: absolute;
-	    top: 3%;
-	    right: 4%;
-	    width: 50px;
-	    height: 50px;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-	    color: var(--text-w);
-	    font-size: 30px;
+		position: absolute;
+		top: 3%;
+		right: 4%;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--text-w);
+		font-size: 30px;
+		cursor: pointer;
 	}
 
 	nav ul {
-	    list-style: none;
-	    display: flex;
-	    flex-direction: column;
-	    width: fit-content;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		width: 80%;
 	}
 
 	nav li {
-	    width: 100%;
+		width: 100%;
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	nav li:last-child {
+		border-bottom: none;
 	}
 
 	nav a {
-	    display: block;
-	    width: 100%;
-	    box-sizing: border-box;
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
 		padding: 20px;
-	    text-decoration: none;
+		text-decoration: none;
 		text-align: center;
-	    font-size: 22px;
-	    font-weight: 600;
-	    color: var(--text-w);
+		font-size: 22px;
+		font-weight: 600;
+		color: var(--text-w);
+		transition: color 0.2s ease;
+	}
+
+	nav a:hover,
+	nav a:active {
+		color: var(--text-r);
 	}
 }
