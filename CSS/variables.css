@@ -1,27 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
+
 :root{
 	/*Fondos*/
-	--bg-color: #0b0f17;     
-	--bg-nav: #111827;       
-	--bg-rut: #1f2937;       
-	--bg-rut-a: #2b384e;
+	--bg-color: #00001a;     
+	--bg-nav: #000033;    
+	--bg-nav2: #00004d;   
 	/*Textos*/
 	--text-w: #f9fafb;        
-	--text-r: #38bdf8;        
-	--text-a: #2563eb;     
+	--text-ic: #38bdf8; 
+	--text-Ttar: #ceeffd;        
+	--text-Ptar: #e7f7fe;     
 	--text-c: #9ca3af;        
 	--text-gris: #6b7280;    
 	/*Bordes*/
-	--border-color: #374151;  
+	--border-color: #38bdf8;  
 	--border-sel: #60a5fa;  
+
 	--tipografia: 'Poppins', sans-serif;
-	--font-h1: clamp(50px, 10vw, 70vh);
-	--font-h2: clamp(20px, 4vw, 20vh);
-	--font-h3: clamp(18px, 3vw, 5vh);
-	--font-p: clamp(16px, 3vw, 2vh);
+	--font-h1: clamp(30px, 8vw, 50vh);
+	--font-h2: clamp(18px, 4vw, 20vh);
+	--font-h3: clamp(17px, 3vw, 5vh);
+	--font-p: clamp(15px, 3vw, 2vh);
 	--font-span: clamp(18px, 3vw, 2.5vh);
-	--font-label: clamp(18px, 1vw, 2vw);
+	--font-label: clamp(22px, 1vw, 2vw);
 	--font-forms: clamp(16px, 1vw, 2vw);
-	--font-a: clamp(17px, 1vw, 2vw);
+	--font-a: clamp(18px, 1vw, 2vw);
 }
 
 *{
