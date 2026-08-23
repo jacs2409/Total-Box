@@ -1,0 +1,70 @@
+@import url('./variables.css');
+
+@media (max-width: 767px){
+
+	main {
+		min-height: auto;
+		padding: 90px 6% 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	h1 {
+		width: 100%;
+		font-size: var(--font-Th1);
+		color: var(--text-ic);
+		text-align: left;
+		margin-bottom: 15px;
+		border-left: 5px solid var(--text-Ttar);
+		padding-left: 15px;
+	}
+
+	#imgfondo {
+		width: 110%;
+		height: auto;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0.08;
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	.articulos{
+		position: relative;
+		width: 100%;
+		padding: 15px 5px;
+		border-bottom: 1px solid var(--border-color);
+		h2 {
+			padding-left: 15px;
+			font-size: var(--font-h3);
+			color: var(--text-Ptar);
+			text-align: left;
+			text-transform: uppercase;
+			border-left: 2px solid var(--text-Ttar);
+		}
+		.infop {
+			padding: 10px 18px 0;
+			font-size: var(--font-p);
+			color: var(--text-c);
+			text-align: justify;
+		}
+		.horariosP{
+			margin-top: 15px;
+			padding: 0 18px;
+			border-left: 2px solid var(--border-color);
+		}
+		.horariosD{
+			font-size: var(--font-span);
+			font-weight: 600;
+			color: var(--text-Ptar);
+		}
+		.coachs{
+			font-size: var(--font-span);
+			color: var(--text-ic);
+		}
+	}
+}

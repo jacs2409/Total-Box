@@ -12,13 +12,13 @@
 	}
 
 	h1 {
-		font-size: var(--font-h1);
-		color: var(--text-w);
+		font-size: var(--font-Th1);
+		color: var(--text-Ptar);
 		text-align: center;
 	}
 
 	h1 span {
-		color: var(--text-r);
+		color: var(--text-Ttar);
 	}
 
 	main img {

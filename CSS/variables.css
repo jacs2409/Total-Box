@@ -14,6 +14,7 @@
 	--border-color: #38bdf8;   
 
 	--tipografia: 'Poppins', sans-serif;
+	--font-Th1: clamp(50px, 10vw, 70vh);
 	--font-h1: clamp(30px, 8vw, 50vh);
 	--font-h2: clamp(18px, 4vw, 20vh);
 	--font-h3: clamp(17px, 3vw, 5vh);

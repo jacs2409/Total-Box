@@ -32,8 +32,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		/* Scroll */
+		justify-content: flex-start;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-top: 80px;
+		padding-bottom: 30px;
 	}
+
 
 	#ico_menu:checked ~ nav {
 		transform: translateX(0);
@@ -114,13 +120,18 @@
 			border-bottom: 1px solid var(--border-color);
 		}
 		a {
-			display: block;
-			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px 30px;
 			text-decoration: none;
-			text-align: center;
 			font-size: var(--font-a);
 			color: var(--text-w);
 			transition: color 0.2s ease;
+		}
+		i {
+			font-size: var(--font-span);
+			color: var(--text-ic);
 		}
 	}
 }
