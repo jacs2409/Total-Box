@@ -9,27 +9,97 @@
 		align-items: center;
 		flex-direction: column; 
 		justify-content: center;
-	}
-
-	h1 {
-		font-size: var(--font-Th1);
-		color: var(--text-Ptar);
 		text-align: center;
+		h1 {
+			font-size: var(--font-Th1);
+			color: var(--text-Ptar);
+		}
+		h1 span {
+			color: var(--text-ic);
+		}
+		h2 {
+			margin: 15px 0;
+			font-size: var(--font-h2);
+			color: var(--text-Ttar);
+		}
+		p {
+			margin: 0 auto;
+			max-width: 450px;
+			color: var(--text-w);
+			font-size: var(--font-p);
+			line-height: 1.6;
+		}
+		#imgfondo {
+			width: 100%;
+			height: auto;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0.2;
+			z-index: -1;
+			pointer-events: none;
+		}
+		.actividades {
+			width: 100%;
+			margin-top: 30px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
+			font-size: 14px;
+			span {
+				text-align: center;
+				padding: 10px 14px;
+				border: 1px solid var(--border-color);
+				border-radius: 8px;
+				color: var(--text-w);
+			}
+			i {
+				color: var(--text-ic);
+				padding-right: 10px;
+			}
+		}
 	}
 
-	h1 span {
-		color: var(--text-Ttar);
+	#Experiencias{
+		h2 {
+			font-size: 22px;
+			color: var(--text-Ttar);
+			text-align: center;
+			padding: 0 4%;
+		}
+		.carrusel{
+			margin: 30px auto;
+			width: 90%;
+			display: flex;
+			overflow-x: auto;
+		}
+		.carrusel::-webkit-scrollbar { 
+			display: none; 
+		}
+		.galeria{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			animation: recorrido 10s infinite linear; 
+			padding-right: 1rem;
+		}
+		.foto{
+			flex: 0 0 250px;
+			width: 250px;
+			height: 180px;
+			object-fit: cover;
+			border-radius: 10px;
+			display: block;
+		}
 	}
+}
 
-	main img {
-		width: 100%;
-		height: auto;
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		opacity: 0.2;
-		z-index: -1;
-		pointer-events: none;
+@keyframes recorrido {
+	from {
+		translate: 0;
+	}to {
+		translate: -100%;
 	}
 }
