@@ -1,0 +1,59 @@
+@import url('./variables.css');
+
+@media (max-width: 767px){
+	main {
+		min-height: auto;
+		padding: 80px 5%;
+	}
+	h1 {
+		font-size: var(--font-h1);
+		color: var(--text-Ptar);
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	h1 span {
+		color: var(--text-ic);
+	}
+	.grupo {
+		margin-bottom: 40px;
+		h2 {
+			color: var(--text-Ptar);
+			font-size: var(--font-h2);
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+	.cont_entrenadores {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5px;
+		justify-items: center;
+	}
+	.entrenador {
+		width: 150px;
+		background-color: var(--bg-nav);
+		border-radius: 10px;
+		margin-top: 15px;
+		border: 1px solid var(--border-color);
+		img {
+			display: block;
+			width: 100%;
+			height: 190px;
+			object-fit: cover;
+		}
+	}
+
+	.info_entrenador {
+		padding: 15px 10px;
+		text-align: center;
+		h3 {
+			margin-bottom: 5px;
+			color: var(--text-w);
+			font-size: var(--font-h3);
+		}
+		p {
+			color: var(--text-ic);
+			font-size: var(--font-p);
+		}
+	}
+}
