@@ -57,9 +57,10 @@
 			color: var(--text-Ptar);
 			text-align: center;
 		}
-		.cont_interno video {
+		.cont_interno iframe {
 			width: 100%;
 			max-width: 700px;
+			aspect-ratio: 16 / 9;
 			height: auto;
 			display: block;
 			margin: auto;
