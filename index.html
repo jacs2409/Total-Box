@@ -74,10 +74,10 @@
                 tus objetivos mediante diferentes rutinas y disciplinas.
             </p>
             <div class="actividades">
-                <span><i class="fa-solid fa-dumbbell"></i> GYM</span>
-                <span><i class="fa-solid fa-mitten"></i> BOXEO</span>
-                <span><i class="fa-solid fa-music"></i> ZUMBA</span>
-                <span><i class="fa-solid fa-hand-fist"></i> KARATE</span>
+                <span onclick="abrirGym()"><i class="fa-solid fa-dumbbell"></i> GYM</span>
+                <span onclick="location.href='./boxeo.html'"><i class="fa-solid fa-mitten"></i> BOXEO</span>
+                <span onclick="location.href='./zumba.html'"><i class="fa-solid fa-music"></i> ZUMBA</span>
+                <span onclick="location.href='./karate.html'"><i class="fa-solid fa-hand-fist"></i> KARATE</span>
             </div>
         </div>
 
@@ -109,5 +109,12 @@
 	<footer>
 		<p>&copy; 2026 Total Box Gym. Todos los derechos reservados.</p>
 	</footer>
+
+	<script>
+	function abrirGym() {
+	    document.getElementById("ico_menu").checked = true;
+	    document.getElementById("rutinas").checked = true;
+	}
+	</script>
 </body>
 </html>
