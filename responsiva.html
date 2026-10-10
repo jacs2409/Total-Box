@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta Responsiva - Total Fitness</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Times New Roman", serif;
+      background: #e9ecef;
+      margin: 0;
+      padding: 30px 15px;
+      color: #222;
+    }
+
+    /* HOJA */
+    .carta {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 55px 65px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      min-height: 1000px;
+    }
+
+    /* ENCABEZADO */
+    .titulo {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .titulo h1 {
+      font-size: 20px;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .titulo p {
+      margin-top: 6px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    /* TEXTO */
+    .texto {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .texto p {
+      margin: 0 0 18px 0;
+    }
+
+    .texto ol {
+      padding-left: 28px;
+      margin-top: 5px;
+    }
+
+    .texto li {
+      margin-bottom: 15px;
+    }
+
+    /* CAMPOS DENTRO DEL TEXTO */
+    .campo {
+      border: none;
+      border-bottom: 1px solid #333;
+      background: transparent;
+      font-family: "Times New Roman", serif;
+      font-size: 16px;
+      padding: 0 3px;
+      outline: none;
+      color: #000;
+      min-width: 100px;
+    }
+
+    .campo:focus {
+      border-bottom: 2px solid #2563eb;
+      background: #f5f9ff;
+    }
+
+    .campo::placeholder {
+      color: #777;
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    .campo-nombre {
+      width: 230px;
+    }
+
+    .campo-edad {
+      width: 55px;
+      text-align: center;
+    }
+
+    .campo-dpi {
+      width: 160px;
+    }
+
+    .campo-menor {
+      width: 220px;
+    }
+
+    .campo-condicion {
+      width: 280px;
+    }
+
+    .campo-direccion {
+      width: 300px;
+    }
+
+    .campo-correo {
+      width: 280px;
+    }
+
+    .campo-telefono {
+      width: 150px;
+    }
+
+    .campo-id {
+      width: 150px;
+    }
+
+    /* DATOS DE CONTACTO */
+    .datos-contacto {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .datos-contacto p {
+      margin: 0;
+    }
+
+    /* CHECKBOX */
+    .aceptacion {
+      margin-top: 25px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background: #fafafa;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .aceptacion input {
+      width: 17px;
+      height: 17px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* EMERGENCIA */
+    .emergencia {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #ccc;
+    }
+
+    /* BOTÓN */
+    .boton-contenedor {
+      margin-top: 35px;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 7px;
+      background: #0a66c2;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover:not(:disabled) {
+      background: #084f9a;
+    }
+
+    button:disabled {
+      background: #9bb8d6;
+      cursor: not-allowed;
+    }
+
+    /* ESTADO */
+    .estado {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 7px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      text-align: center;
+      display: none;
+    }
+
+    .estado.ok {
+      display: block;
+      background: #e6f7ec;
+      color: #186a3b;
+      border: 1px solid #b8e6c9;
+    }
+
+    .estado.error {
+      display: block;
+      background: #fdecea;
+      color: #a93226;
+      border: 1px solid #f5c6cb;
+    }
+
+    .estado a {
+      color: #0a66c2;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+
+      body {
+        padding: 10px;
+      }
+
+      .carta {
+        padding: 30px 22px;
+      }
+
+      .texto {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .campo {
+        font-size: 15px;
+        max-width: 100%;
+      }
+
+      .campo-nombre,
+      .campo-menor,
+      .campo-condicion,
+      .campo-direccion,
+      .campo-correo {
+        width: 100%;
+      }
+
+      .campo-dpi {
+        width: 150px;
+      }
+
+      .campo-telefono {
+        width: 130px;
+      }
+    }
+
+    @media print {
+
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .carta {
+        box-shadow: none;
+        max-width: none;
+        padding: 30px;
+      }
+
+      .boton-contenedor,
+      .aceptacion {
+        display: none;
+      }
+
+      .campo {
+        border-bottom: 1px solid #333;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="carta">
+
+    <div class="titulo">
+      <h1>CARTA RESPONSIVA Y EXONERACIÓN DE RESPONSABILIDAD</h1>
+      <p>Total Fitness</p>
+    </div>
+
+    <form id="formulario" onsubmit="enviar(event)">
+
+      <!-- DATOS DE CONTACTO -->
+      <div class="datos-contacto">
+
+        <div class="datos-contacto">
+          <p>
+            ID de inscrito:
+            <input
+              type="text"
+              id="idInscrito"
+              class="campo campo-id"
+              placeholder="Ej. 001"
+              required
+            >
+          </p>
+        </div>
+
+        <p>
+          Dirección:
+          <input
+            type="text"
+            id="direccion"
+            class="campo campo-direccion"
+            placeholder="Escriba su dirección"
+            required
+          >
+        </p>
+
+        <p>
+          Correo electrónico:
+          <input
+            type="email"
+            id="correo"
+            class="campo campo-correo"
+            placeholder="Escriba su correo"
+            required
+          >
+        </p>
+
+        <p>
+          Número de teléfono:
+          <input
+            type="tel"
+            id="telefono"
+            class="campo campo-telefono"
+            placeholder="Teléfono"
+            required
+          >
+        </p>
+
+      </div>
+
+
+      <!-- CUERPO DE LA CARTA -->
+      <div class="texto">
+
+        <p>
+          Señores de <strong>Total Fitness</strong>, yo
+          <input
+            type="text"
+            id="nombre"
+            class="campo campo-nombre"
+            placeholder="Nombre completo"
+            required
+          >
+          de
+          <input
+            type="number"
+            id="edad"
+            class="campo campo-edad"
+            placeholder="Edad"
+            min="0"
+            max="120"
+            required
+          >
+          años de edad, con número de DPI
+          <input
+            type="text"
+            id="dpi"
+            class="campo campo-dpi"
+            placeholder="Número de DPI"
+            required
+          >
+          me inscribo de forma personal, o actúo en forma de representante legal del menor
+          <input
+            type="text"
+            id="menor"
+            class="campo campo-menor"
+            placeholder="Nombre del menor"
+          >
+          de
+          <input
+            type="number"
+            id="edadMenor"
+            class="campo campo-edad"
+            placeholder="Edad"
+            min="0"
+            max="120"
+          >
+          años de edad, manifiesto mi deseo de hacer uso de las instalaciones del gimnasio
+          en cualquiera de sus disciplinas.
+        </p>
+
+        <p>
+          Hago constar bajo juramento lo siguiente:
+        </p>
+
+        <ol>
+
+          <li>
+            <strong>ESTADO DE SALUD:</strong>
+            declaro que me encuentro en buen estado de salud física y mental
+            para realizar actividad física y que no padezco ninguna condición
+            médica que me impida hacer ejercicio.
+            Si tengo alguna condición física
+            <input
+              type="text"
+              id="condicion"
+              class="campo campo-condicion"
+              placeholder="Especifique condición o escriba 'ninguna'"
+            >,
+            me comprometo a decirlo al personal de apoyo del gimnasio y comunicar
+            cualquier cambio en mi condición médica.
+          </li>
+
+          <li>
+            <strong>ASUMO EL RIESGO:</strong>
+            entiendo que el uso de pesas, máquinas y clases de zumba, boxeo
+            o karate implican riesgo de lesiones, caídas o malestares.
+            Asumo voluntariamente dichos riesgos y cualquier malestar se lo
+            haré saber al personal del gimnasio.
+          </li>
+
+          <li>
+            <strong>EXONERACIÓN:</strong>
+            exonero de toda responsabilidad civil y penal al gimnasio
+            Total Fitness, a sus propietarios, maestros, entrenadores y
+            compañeros, por cualquier accidente, lesión o complicación de
+            salud que pueda sufrir dentro de las instalaciones.
+          </li>
+
+          <li>
+            <strong>COMPROMISO:</strong>
+            me comprometo a usar correctamente el equipo, seguir las
+            instrucciones de los entrenadores y reportar cualquier molestia
+            o falla en el equipo.
+          </li>
+
+          <li>
+            <strong>PERTENENCIAS:</strong>
+            soy responsable de mis objetos personales. El gimnasio no se
+            hace responsable por pérdida o robo.
+          </li>
+
+        </ol>
+
+        <p>
+          He leído la carta responsiva y Exoneración de responsabilidad.
+        </p>
+
+
+        <!-- EMERGENCIA -->
+        <div class="emergencia">
+
+          <p>
+            <strong>En caso de emergencia:</strong>
+            llamar a
+            <input
+              type="text"
+              id="emergencia"
+              class="campo campo-nombre"
+              placeholder="Nombre"
+              required
+            >
+            y parentesco
+            <input
+              type="text"
+              id="parentesco"
+              class="campo"
+              style="width:150px"
+              placeholder="Parentesco"
+              required
+            >.
+          </p>
+
+          <p>
+            Tel.
+            <input
+              type="tel"
+              id="tel1"
+              class="campo campo-telefono"
+              placeholder="Teléfono"
+              required
+            >
+
+            Tel.
+            <input
+              type="tel"
+              id="tel2"
+              class="campo campo-telefono"
+              placeholder="Teléfono"
+            >
+          </p>
+
+          <p>
+            Tipo de sangre:
+            <select
+              id="sangre"
+              class="campo"
+              style="width:90px"
+              required
+            >
+              <option value="">--</option>
+              <option>O+</option>
+              <option>O-</option>
+              <option>A+</option>
+              <option>A-</option>
+              <option>B+</option>
+              <option>B-</option>
+              <option>AB+</option>
+              <option>AB-</option>
+            </select>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- ACEPTACIÓN -->
+      <div class="aceptacion">
+        <label>
+          <input type="checkbox" id="acepto" required>
+          Confirmo que he leído y comprendido la Carta Responsiva y
+          Exoneración de Responsabilidad de Total Fitness y acepto las
+          condiciones descritas anteriormente.
+        </label>
+      </div>
+
+
+      <!-- BOTÓN -->
+      <div class="boton-contenedor">
+
+        <button type="submit" id="btnEnviar">
+          Generar carta responsiva
+        </button>
+
+        <div id="estado" class="estado"></div>
+
+      </div>
+
+    </form>
+
+  </div>
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbzzlnSqFc5ju_M1V7CJZwlw25Go9fJ6FqBhvdAqY8hi6qkp0iHJtSd5kTxRhEJ1T7q3xg/exec";
+
+    function enviar(e) {
+      e.preventDefault();
+
+      const btn = document.getElementById("btnEnviar");
+      const estado = document.getElementById("estado");
+
+      btn.disabled = true;
+      btn.textContent = "Enviando...";
+      estado.className = "estado";
+      estado.innerHTML = "";
+
+      const datos = {
+        idInscrito: document.getElementById("idInscrito").value,
+        direccion:  document.getElementById("direccion").value,
+        correo:     document.getElementById("correo").value,
+        telefono:   document.getElementById("telefono").value,
+        nombre:     document.getElementById("nombre").value,
+        edad:       document.getElementById("edad").value,
+        dpi:        document.getElementById("dpi").value,
+        menor:      document.getElementById("menor").value,
+        edadMenor:  document.getElementById("edadMenor").value,
+        condicion:  document.getElementById("condicion").value,
+        emergencia: document.getElementById("emergencia").value,
+        parentesco: document.getElementById("parentesco").value,
+        tel1:       document.getElementById("tel1").value,
+        tel2:       document.getElementById("tel2").value,
+        sangre:     document.getElementById("sangre").value
+      };
+
+      const formData = new FormData();
+      Object.keys(datos).forEach(function(k) {
+        formData.append(k, datos[k]);
+      });
+
+      fetch(API_URL, {
+        method: "POST",
+        body: formData
+      })
+      .then(function(resp) {
+        return resp.json();
+      })
+      .then(function(res) {
+        if (res.correcto) {
+          window.location.href = "./index.html";
+        } else {
+          btn.disabled = false;
+          btn.textContent = "Generar carta responsiva";
+          estado.className = "estado error";
+          estado.textContent = "❌ " + (res.mensaje || "Error desconocido");
+        }
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        btn.textContent = "Generar carta responsiva";
+        estado.className = "estado error";
+        estado.textContent = "❌ Error de conexión: " + err.message;
+      });
+    }
+  </script>
+
+</body>
+</html>
